@@ -6,7 +6,9 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-    SBMLDocument* sbmlDoc = readSBML("./oscillator.xml");
+    char buff[100] = "./";
+    strcat( buff,  a.argv()[1] );
+    SBMLDocument* sbmlDoc = readSBML( buff );
     FILE* fout = fopen("out.out" , "w");
     Model* sbmlMod = sbmlDoc->getModel();
 
@@ -61,5 +63,6 @@ int main(int argc, char *argv[])
     fprintf(fout , "\n" );
 
     fclose(fout);
+    exit(0);
     return a.exec();
 }
