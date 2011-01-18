@@ -1,0 +1,25 @@
+Compartmants:
+compartment
+
+Species:
+S1
+S2
+X0
+X1
+X2
+
+Parameters:
+J0_v0=8
+J1_k3=0
+J2_k1=1
+J2_k_1=0
+J2_c=1
+J2_q=3
+J3_k2=5
+
+Reactions:
+J0: X0->S1
+J1: S1->X1
+J2: S1->S2
+J3: S2->X2
+
